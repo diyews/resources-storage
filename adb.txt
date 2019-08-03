@@ -2,7 +2,7 @@
 ! Version: 1
 ! Title: diyews
 ! Last modified: 
-! Expires: 4 days (update frequency)
+! Expires: 1 hours (update frequency)
 ! Homepage: https://github.com/diyews/resources-storage
 !
 
