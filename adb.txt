@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Version: 1
-! Title: A
+! Title: diyews
 ! Last modified: 
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/diyews/resources-storage
