@@ -1,0 +1,26 @@
+[Adblock Plus 3.6]
+!
+staticlive.douyucdn.cn/upload/*
+live.bilibili.com##.live-ad-full
+forwardvod.douyucdn.cn/dymvod/*
+douyu.com#?#div:-abp-has(> p:-abp-contains(客户端))
+douyu.com##div.room-wbshare
+douyu.com##div.rmd-tip
+douyu.com##div.pay-task
+douyu.com##div.focus-lead
+douyu.com##div.f-sign-cont
+douyu.com##div.ToolbarActivityArea
+douyu.com##div.Title-roomOtherBottom
+douyu.com##div.PlayerToolbar-reactGroup
+douyu.com##div.EmotionVoice
+douyu.com##div.AppFlow
+douyu.com##.sharkgirltip
+douyu.com##.bg2-4c5b38
+douyu.com##.bg-d4758b
+douyu.com##.bg-1a1f33
+douyu.com##.athena-booth-panel
+douyu.com##.UPlayerLotteryEnter
+douyu.com##.Background-holder
+douyu.com###js-room-activity
+douyu.com###dysign-18
+@@staticlive.douyucdn.cn/upload/*/*
