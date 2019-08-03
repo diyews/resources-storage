@@ -27,6 +27,7 @@ douyu.com##.bg-1a1f33
 douyu.com##.athena-booth-panel
 douyu.com##.UPlayerLotteryEnter
 douyu.com##.Background-holder
+douyu.com##.TVGameEntry-wrapper
 douyu.com###js-room-activity
 douyu.com###dysign-18
 @@staticlive.douyucdn.cn/upload/*/*
