@@ -1,0 +1,2 @@
+# resources-storage
+Resources storage.
