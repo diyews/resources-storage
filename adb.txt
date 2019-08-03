@@ -5,8 +5,9 @@
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/diyews/resources-storage
 !
+
+! douyu.com
 staticlive.douyucdn.cn/upload/*
-live.bilibili.com##.live-ad-full
 forwardvod.douyucdn.cn/dymvod/*
 douyu.com#?#div:-abp-has(> p:-abp-contains(客户端))
 douyu.com##div.room-wbshare
@@ -29,3 +30,6 @@ douyu.com##.Background-holder
 douyu.com###js-room-activity
 douyu.com###dysign-18
 @@staticlive.douyucdn.cn/upload/*/*
+
+! bilibili.com
+live.bilibili.com##.live-ad-full
