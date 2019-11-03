@@ -32,7 +32,7 @@ douyu.com##.bc-wrapper-2
 douyu.com###js-room-activity
 douyu.com###dysign-18
 @@staticlive.douyucdn.cn/upload/*/*
-*.smtcdns.net
+*.smtcdns.net/*.xs^
 shark2.douyucdn.cn/front-publish/stream-sdk-lib-master/dyp2p*
 
 ! bilibili.com
