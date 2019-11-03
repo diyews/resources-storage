@@ -33,6 +33,7 @@ douyu.com###js-room-activity
 douyu.com###dysign-18
 @@staticlive.douyucdn.cn/upload/*/*
 *.smtcdns.net
+shark2.douyucdn.cn/front-publish/stream-sdk-lib-master/dyp2p*
 
 ! bilibili.com
 live.bilibili.com##.live-ad-full
