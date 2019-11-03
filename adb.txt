@@ -32,6 +32,7 @@ douyu.com##.bc-wrapper-2
 douyu.com###js-room-activity
 douyu.com###dysign-18
 @@staticlive.douyucdn.cn/upload/*/*
+*.smtcdns.net
 
 ! bilibili.com
 live.bilibili.com##.live-ad-full
