@@ -36,6 +36,7 @@ douyu.com###dysign-18
 shark2.douyucdn.cn/front-publish/stream-sdk-lib-master/dyp2p*
 *.ourdvsss.com/*.wsv
 *.douyucdn.cn/*.wsv
+hdl5.douyucdn.cn/*.chunk
 
 ! bilibili.com
 live.bilibili.com##.live-ad-full
