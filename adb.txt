@@ -31,6 +31,7 @@ douyu.com##.TVGameEntry-wrapper
 douyu.com##.bc-wrapper-2:not(.bc-wrapper-player)
 douyu.com###js-room-activity
 douyu.com###dysign-18
+douyu.com###RandomPKBar-container
 @@staticlive.douyucdn.cn/upload/*/*
 *.smtcdns.net/*.xs^
 shark2.douyucdn.cn/front-publish/stream-sdk-lib-master/dyp2p*
