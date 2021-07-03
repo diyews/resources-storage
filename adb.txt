@@ -34,6 +34,7 @@ douyu.com###dysign-18
 douyu.com###RandomPKBar-container
 douyu.com##.MMSvgaBaseContainer
 @@staticlive.douyucdn.cn/upload/*/*
+smtv.io##.login-download-dialog
 *.smtcdns.net/*.xs^
 shark2.douyucdn.cn/front-publish/stream-sdk-lib-master/dyp2p*
 *.ourdvsss.com/*.wsv
