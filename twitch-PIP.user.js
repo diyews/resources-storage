@@ -6,8 +6,8 @@
 // @author       diyews
 // @match        https://www.twitch.tv/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitch.tv
-// @updateURL    https://raw.githubusercontent.com/diyews/resources-storage/master/twitch-PIP.js
-// @downloadURL  https://raw.githubusercontent.com/diyews/resources-storage/master/twitch-PIP.js
+// @updateURL    https://raw.githubusercontent.com/diyews/resources-storage/master/twitch-PIP.user.js
+// @downloadURL  https://raw.githubusercontent.com/diyews/resources-storage/master/twitch-PIP.user.js
 // @grant        none
 // ==/UserScript==
 
