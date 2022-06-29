@@ -5,6 +5,7 @@
 // @description  Number pad to control play rate. (1) -> rate 1, (2) -> rate 2, (5,8) -> - and + 0.5, (7,9) -> - and + 0.1, (4,6) -> backward and forward
 // @author       diyews
 // @match        https://v.douyu.com/show/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=douyu.com
 // @require      https://cdn.jsdelivr.net/npm/toastify-js
 // @resource     tostifyCSS https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css
 // @updateURL    https://raw.githubusercontent.com/diyews/resources-storage/master/user_script/douyu_video_rate.user.js
