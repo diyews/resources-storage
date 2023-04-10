@@ -33,6 +33,7 @@ douyu.com###js-room-activity
 douyu.com###dysign-18
 douyu.com###RandomPKBar-container
 douyu.com##.MMSvgaBaseContainer
+douyu.com##.Header-broadcast-wrap
 @@staticlive.douyucdn.cn/upload/*/*
 smtv.io##.login-download-dialog
 *.smtcdns.net/*.xs^
