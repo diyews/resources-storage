@@ -1,4 +1,4 @@
-function runUntilTrue(fn, delay = 300) {
+function runUntil(fn, delay = 300) {
   return new Promise((resolve) => {
     const intervalId = setInterval(async () => {
       try {
