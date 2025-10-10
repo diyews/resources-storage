@@ -47,3 +47,13 @@ hdl5.douyucdn.cn/*.chunk
 live.bilibili.com##.live-ad-full
 bilibili.com###reportFirst2
 bilibili.com##.bpx-player-toast-item
+live.bilibili.com##.login-guide
+live.bilibili.com##.privacy-dialog
+live.bilibili.com###shop-popover-vm
+search.bilibili.com##.login-panel-popover
+search.bilibili.com##.go-login-btn+.v-popover
+live.bilibili.com###switch-login-guide-vm
+
+! sdo
+i.sdo.com##.consulting
+login.u.sdo.com##.footer
