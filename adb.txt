@@ -44,15 +44,15 @@ hdl5.douyucdn.cn/*.chunk
 ! douyu.com##.layout-Player-asideMain
 
 ! bilibili.com
-live.bilibili.com##.live-ad-full
+bilibili.com##.live-ad-full
 bilibili.com###reportFirst2
 bilibili.com##.bpx-player-toast-item
-live.bilibili.com##.login-guide
-live.bilibili.com##.privacy-dialog
-live.bilibili.com###shop-popover-vm
-search.bilibili.com##.login-panel-popover
-search.bilibili.com##.go-login-btn+.v-popover
-live.bilibili.com###switch-login-guide-vm
+bilibili.com##.login-guide
+bilibili.com##.privacy-dialog
+bilibili.com###shop-popover-vm
+bilibili.com##.login-panel-popover
+bilibili.com##.go-login-btn+.v-popover
+bilibili.com###switch-login-guide-vm
 
 ! sdo
 i.sdo.com##.consulting
