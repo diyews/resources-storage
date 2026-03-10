@@ -1,0 +1,22 @@
+[Unit]
+Description=FRP Anti-Brute Force Protection Service
+After=network.target
+
+[Service]
+# 建议使用普通用户运行，如果是 root 请修改为 root
+User=root
+Type=simple
+# 二进制文件的绝对路径
+ExecStart=/www/wwwroot/frps-plugin/frps-blacklist  ###
+# 工作目录
+WorkingDirectory=/www/wwwroot/frps-plugin   ###
+# 崩溃后 5 秒自动重启
+Restart=always
+RestartSec=5s
+# 标准输出和错误日志输出到系统日志
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=frps-blacklist   ###
+
+[Install]
+WantedBy=multi-user.target
