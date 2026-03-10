@@ -25,4 +25,8 @@ jobs:
       run: CGO_ENABLED=0 go build -v -ldflags="-s -w -extldflags '-static'" -o frps-blacklist go_server/frps_blacklist.go
 
     - uses: actions/upload-artifact@v4
-      with: {name: frps-blacklist, path: frps-blacklist}
+      with: 
+        name: frps-blacklist
+        path: |
+          frps-blacklist
+          go_server/frps_blacklist.service
