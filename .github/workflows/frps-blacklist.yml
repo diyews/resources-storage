@@ -25,4 +25,4 @@ jobs:
       run: go build -v -ldflags="-s -w" -o frps-blacklist go_server/frps_blacklist.go
 
     - uses: actions/upload-artifact@v4
-      with: {name: frp-handler, path: frp-handler}
+      with: {name: frps-blacklist, path: frps-blacklist}
