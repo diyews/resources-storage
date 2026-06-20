@@ -4,7 +4,7 @@
 // @version      2026-06-19
 // @description  try to take over the world!
 // @author       You
-// @match        https://www.bilibili.com/*
+// @match        https://*.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
 // @grant        none
 // ==/UserScript==
@@ -15,6 +15,9 @@
         var styles = `
     .bili-mini-mask {
         opacity: 0.1
+    }
+    .right-entry > .right-entry-item:first-child, .login-tip {
+        display: none !important;
     }
 
 `
