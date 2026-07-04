@@ -27,16 +27,28 @@
         document.head.appendChild(styleSheet)
     }
 
+    let recentPlayTime = Date.now()
     function a() {
         const close = document.querySelector('.bili-mini-close-icon')
+        const video = document.querySelector('#bilibili-player video')
+        //
         document.querySelector('.bpx-player-toast-cancel')?.click()
+        // 画质提醒
+        document.querySelector('.login-guide .close-btn')?.click()
         if (close) {
             close.click()
-            const video = document.querySelector('#bilibili-player video')
             if (video?.paused) {
-                video.play()
+                // 5秒内暂停的，就自动播放，否则无视
+                if (Date.now() - recentPlayTime < 5e3) {
+                    video.play()
+                }
             }
         }
+
+        if (!video?.paused) {
+            recentPlayTime = Date.now()
+        }
+
     }
 
     setInterval(() => a(), 100)
