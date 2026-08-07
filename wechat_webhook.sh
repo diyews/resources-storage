@@ -1,0 +1,40 @@
+#!/bin/sh
+
+. /etc/profile.d/custom_env.sh
+
+WEBHOOK_KEY=$WECHAT_PUSH_STATUS
+WEBHOOK_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WEBHOOK_KEY}"
+CUSTOM_ID="St_4"
+NOW_TIME=$(date "+%Y-%m-%d %H:%M:%S")
+
+# 1. 获取系统开机运行时间
+UPTIME=$(uptime | awk -F' up |,  load average: ' '{print $2", "$3}')
+
+# 2. 遍历读取所有 thermal_zone 温度
+TEMP_INFO=""
+for zone in /sys/class/thermal/thermal_zone*; do
+    if [ -f "${zone}/type" ] && [ -f "${zone}/temp" ]; then
+        ZONE_TYPE=$(cat "${zone}/type")
+        RAW_TEMP=$(cat "${zone}/temp")
+        # 原始数值是毫摄氏度，除以1000转为℃
+        TEMP_C=$((RAW_TEMP/1000))
+        TEMP_INFO="${TEMP_INFO}${ZONE_TYPE}: ${TEMP_C}℃  
+"
+    fi
+done
+
+# 拼接完整消息
+MSG_CONTENT="【状态上报】
+当前时间：${NOW_TIME}
+设备ID：${CUSTOM_ID}
+开机时长：${UPTIME}
+硬件温度：
+${TEMP_INFO}"
+
+# 发送企业微信机器人
+RESULT=$(curl -s -X POST "${WEBHOOK_URL}" \
+  -H "Content-Type: application/json" \
+  -d "{\"msgtype\":\"text\",\"text\":{\"content\":\"${MSG_CONTENT}\"}}")
+
+echo "${RESULT}"
+echo ""
