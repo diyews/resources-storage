@@ -4,7 +4,7 @@
 
 WEBHOOK_KEY=$WECHAT_PUSH_STATUS
 WEBHOOK_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WEBHOOK_KEY}"
-CUSTOM_ID="St_4"
+CUSTOM_ID=${WECHAT_DEV_NAME:=WECHAT_DEV}
 NOW_TIME=$(date "+%Y-%m-%d %H:%M:%S")
 
 # 1. 获取系统开机运行时间
