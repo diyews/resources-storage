@@ -1,3 +1,8 @@
+## 下载更新Script
+```sh
+curl -L -o update.sh https://raw.githubusercontent.com/diyews/resources-storage/refs/heads/linux_scripts/update.sh
+```
+
 ### 配置文件路径：
 ```sh
 vi /etc/profile.d/custom_env.sh
