@@ -67,4 +67,14 @@ if [[ -f "$INNER_DIR/$UPDATE_SCRIPT" ]]; then
   cp -f "$INNER_DIR/$UPDATE_SCRIPT" "$WORKDIR/$UPDATE_SCRIPT"
 fi
 
+# ★ 关键修复：覆盖后立即为所有 shell 脚本添加执行权限
+echo "⠂ 修复脚本执行权限..."
+find "$WORKDIR" -maxdepth 1 -type f -name "*.sh" -exec chmod +x {} \;
+
+# 同时修复自身脚本（如果它正好是 .sh）
+chmod +x "$WORKDIR/$UPDATE_SCRIPT"
+
+# 顺手处理 Windows 换行符问题（CRLF → LF），避免 ^M 错误
+find "$WORKDIR" -maxdepth 1 -type f -name "*.sh" -exec sed -i 's/\r$//' {} \; 2>/dev/null || true
+
 echo "✓ 更新完成：$LOCAL_VER → $REMOTE_VER"
