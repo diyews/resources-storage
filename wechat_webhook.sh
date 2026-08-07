@@ -17,7 +17,7 @@ for zone in /sys/class/thermal/thermal_zone*; do
         ZONE_TYPE=$(cat "${zone}/type")
         RAW_TEMP=$(cat "${zone}/temp")
         # 原始数值是毫摄氏度，除以1000转为℃
-        TEMP_C=$((RAW_TEMP/1000))
+        TEMP_C=$(( ${RAW_TEMP#-} > 1000 ? RAW_TEMP / 1000 : RAW_TEMP ))
         TEMP_INFO="${TEMP_INFO}${ZONE_TYPE}: ${TEMP_C}℃  
 "
     fi
