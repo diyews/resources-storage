@@ -41,7 +41,7 @@ elif [ "$ACTION" = "on" ]; then
         # echo default-on > /sys/class/leds/${RED_LED}/trigger 2>/dev/null
         # echo netdev > /sys/class/leds/${BLUE_LED}/trigger 2>/dev/null
         # logger -t led_control "LED ON: no backup found, using defaults"
-        echo "No backup file"
+        echo "No backup file, exit without any changed."
     fi
 else
     echo "Usage: $0 {off|on}"
