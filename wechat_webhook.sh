@@ -23,10 +23,31 @@ for zone in /sys/class/thermal/thermal_zone*; do
     fi
 done
 
+# ============================================================
+# 函数: get_up_ipv4_addrs
+# 描述: 获取所有 state UP 网络接口的 IPv4 地址
+# ============================================================
+get_up_ipv4_addrs() {
+    ip -4 addr show | awk '
+        /^[0-9]+:/ {
+            iface = $2
+            gsub(/:/, "", iface)
+            is_up = ($0 ~ /state UP/) ? 1 : 0
+            next
+        }
+        /inet / && is_up {
+            split($2, a, "/")
+            # print iface, a[1]
+            print a[1]
+        }
+    '
+}
+
 # 拼接完整消息
 MSG_CONTENT="【状态上报】
 当前时间：${NOW_TIME}
 设备ID：${CUSTOM_ID}
+设备IP：$(get_up_ipv4_addrs)
 开机时长：${UPTIME}
 硬件温度：
 ${TEMP_INFO}"
