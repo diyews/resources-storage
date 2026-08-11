@@ -53,6 +53,10 @@ bilibili.com###shop-popover-vm
 bilibili.com##.login-panel-popover
 bilibili.com##.go-login-btn+.v-popover
 bilibili.com###switch-login-guide-vm
+bilibili.com##.side-bar-popup-cntr
+bilibili.com##.gift-control-section
+bilibili.com##.flip-view
+bilibili.com##.adblock-tips
 
 ! sdo
 i.sdo.com##.consulting
