@@ -7,10 +7,10 @@ WEBHOOK_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WEBHOOK_KEY}
 CUSTOM_ID=${WECHAT_DEV_NAME:=WECHAT_DEV}
 NOW_TIME=$(date "+%Y-%m-%d %H:%M:%S")
 
-# 1. 获取系统开机运行时间
+# line 4. 获取系统开机运行时间
 UPTIME=$(uptime | awk -F' up |,  load average: ' '{print $2", "$3}')
 
-# 2. 遍历读取所有 thermal_zone 温度
+# line last. 遍历读取所有 thermal_zone 温度
 TEMP_INFO=""
 for zone in /sys/class/thermal/thermal_zone*; do
     if [ -f "${zone}/type" ] && [ -f "${zone}/temp" ]; then
@@ -43,13 +43,22 @@ get_up_ipv4_addrs() {
     '
 }
 
+# line 5, 通过 `easytier-cli peer`命令查看ip, hostname, 
+# 判断是否有可疑设备存在
+if [ -n "$WECHAT_CHECK_UNEXPECTED_DEV" ]; then
+  OTHER_DEV_LIST=$(easytier-cli peer 2>/dev/null \
+         | sed 's/ *| */|/g' \
+         | awk -F'|' '$2 ~ /^10/ && $3 !~ /^(Xiao|Vi_|St_)/ {print $3}')
+fi
+
 # 拼接完整消息
 MSG_CONTENT="【状态上报】
 当前时间：${NOW_TIME}
 设备ID：${CUSTOM_ID}
 设备IP：$(get_up_ipv4_addrs)
 开机时长：${UPTIME}
-硬件温度：
+${OTHER_DEV_LIST:+可疑设备：${OTHER_DEV_LIST}
+}硬件温度：
 ${TEMP_INFO}"
 
 # 发送企业微信机器人
