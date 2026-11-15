@@ -13,7 +13,7 @@ vi /etc/profile.d/custom_env.sh
 ```sh
 WECHAT_DEV_NAME="xxx"
 WECHAT_PUSH_STATUS="xxx-xxx-xx"
-WECHAT_CHECK_UNEXPECTED_DEV="" # 非空时检查easytier-cli 是否有可以设备连接
+WECHAT_CHECK_UNEXPECTED_DEV="" # 非空时检查easytier-cli 是否有可疑设备在线
 ```
 ---
 
