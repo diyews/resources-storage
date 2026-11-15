@@ -16,3 +16,10 @@ WECHAT_PUSH_STATUS="xxx-xxx-xx"
 WECHAT_CHECK_UNEXPECTED_DEV=""
 ```
 ---
+
+### 计划任务配置
+```
+0 6,9,12,15,18,21,23 * * * /root/wechat/wechat_webhook.sh
+0 23 * * * /root/wechat/leds.sh off
+0 7 * * * /root/wechat/leds.sh on
+```
